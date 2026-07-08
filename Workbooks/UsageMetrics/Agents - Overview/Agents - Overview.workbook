@@ -7,11 +7,18 @@
         "json": "Was this agent helpful? We'd love your feedback. [Tell us what you think](https://forms.cloud.microsoft/r/cXYSGdYTyT)",
         "style": "info"
       },
-      "conditionalVisibility": {
-        "parameterName": "PublicCloudCheck",
-        "comparison": "isEqualTo",
-        "value": "Public"
-      },
+      "conditionalVisibilities": [
+        {
+          "parameterName": "PublicCloudCheck",
+          "comparison": "isEqualTo",
+          "value": "Public"
+        },
+        {
+          "parameterName": "GenAIDataCheck",
+          "comparison": "isNotEqualTo",
+          "value": "NotFound"
+        }
+      ],
       "name": "FeedbackBanner"
     },
     {
